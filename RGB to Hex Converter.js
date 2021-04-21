@@ -17,7 +17,7 @@ function RGBelement() {
     while (a !== 0) {
       let HEXword = HEX[b]
       hexNumber.unshift(HEXword)  //推進陣列
-      b = a % 16
+      b = a % 16  //b要放前面否則a先被洗掉之後丟給b那b是錯誤的
       a = parseInt(a / 16)
       if (a === 0) {              //若a為零還要再輸出一次餘數，否則會少輸出一個
         HEXword = HEX[b]
@@ -35,14 +35,14 @@ function RGBelement() {
   const colorbox = document.querySelector('.color')
   colorbox.style.backgroundColor = `rgb(${R},${G},${B})`
 
-  convert(B)
-  convert(G)
-  convert(R)
+  convert(B)  //先將B推進陣列
+  convert(G)  //再將G推進陣列
+  convert(R)  //再將R推進陣列
   $('.hex-num').html(`#${hexNumber[0]}${hexNumber[1]}${hexNumber[2]}${hexNumber[3]}${hexNumber[4]}${hexNumber[5]}`)
 
 
-  console.log(convert(R))
   //後續會用到清掉陣列內容以便下一個數字轉換後可填入
   hexNumber.splice(0, hexNumber.length)
+  console.log(hexNumber)
 }
 
