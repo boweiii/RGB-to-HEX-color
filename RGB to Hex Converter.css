@@ -44,3 +44,9 @@ h5 {
 .card-HEX{
   margin-bottom: 15px;
 }
+
+.hex-num{
+  text-align: center;
+  font-weight: 800;
+  font-size: medium;
+}
