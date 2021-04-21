@@ -1,5 +1,6 @@
 const HEX = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
 const hexNumber = []
+
 function RGBelement() {
   let R = document.querySelector('.inR').value
   console.log(R)
@@ -25,6 +26,20 @@ function RGBelement() {
     }
     return hexNumber
   }
+  const rBox = document.querySelector('.rBox')
+  const gBox = document.querySelector('.gBox')
+  const bBox = document.querySelector('.bBox')
+  rBox.style.backgroundColor = `rgb(${R},0,0)`
+  gBox.style.backgroundColor = `rgb(0,${G},0)`
+  bBox.style.backgroundColor = `rgb(0,0,${B})`
+  const colorbox = document.querySelector('.color')
+  colorbox.style.backgroundColor = `rgb(${R},${G},${B})`
+
+  convert(B)
+  convert(G)
+  convert(R)
+  $('.hex-num').html(`#${hexNumber[0]}${hexNumber[1]}${hexNumber[2]}${hexNumber[3]}${hexNumber[4]}${hexNumber[5]}`)
+
 
   console.log(convert(R))
   //後續會用到清掉陣列內容以便下一個數字轉換後可填入
