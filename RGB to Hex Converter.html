@@ -12,6 +12,7 @@
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="RGB to Hex Converter.css">
+  <script src="jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -23,21 +24,21 @@
 
         <div class="rgb-textbar">
           <div class="RGB-wordinput">
-            <div class="RGB-words">R : <input type="text"></div>
+            <div class="RGB-words">R : <input class="inR" type="text"></div>
             <div class="color-box"></div>
           </div>
 
           <div class="RGB-wordinput">
-            <div class="RGB-words">G : <input type="text"></div>
+            <div class="RGB-words">G : <input class="inG" type="text"></div>
             <div class="color-box"></div>
           </div>
 
           <div class="RGB-wordinput">
-            <div class="RGB-words">B : <input type="text"></div>
+            <div class="RGB-words">B : <input class="inB" type="text"></div>
             <div class="color-box"></div>
           </div>
 
-          <a href="#" class="btn btn-primary">Convert</a>
+          <a href="#" class="btn btn-primary" onclick="RGBelement()">Convert</a>
         </div>
       </section>
       <section class="card-right">
