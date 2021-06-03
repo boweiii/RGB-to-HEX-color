@@ -10,6 +10,12 @@ function RGBelement() {
   console.log(B)
 
   function convert(decimal) {
+    if (decimal < 16) {  //1~16之間
+      let b = decimal % 16
+      HEXword = HEX[b]
+      hexNumber.unshift(HEXword)
+      hexNumber.unshift(HEX[0])
+    }
     let a = parseInt(decimal / 16)  //先除一遍用parseInt取整數，捨去小數
 
     //decimal 2 hex 參考資料 >>> https://www.footmark.info/introduction-to-computer/digital-system-conversion/#fm-chapter-3-3-1
@@ -24,7 +30,7 @@ function RGBelement() {
         hexNumber.unshift(HEXword)
       }
     }
-    return hexNumber
+    // return hexNumber
   }
   const rBox = document.querySelector('.rBox')
   const gBox = document.querySelector('.gBox')
