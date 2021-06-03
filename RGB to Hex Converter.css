@@ -16,6 +16,9 @@
   height: 30px;
   margin: 10px;
   margin-bottom: 15px;
+  text-align: center;
+  font-weight: 800;
+  font-size: medium;
 }
 .color {
   border: 1px solid rgb(163, 162, 162);
@@ -46,10 +49,4 @@ h5 {
 }
 .card-HEX {
   margin-bottom: 15px;
-}
-
-.hex-num {
-  text-align: center;
-  font-weight: 800;
-  font-size: medium;
 }
